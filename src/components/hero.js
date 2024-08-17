@@ -6,7 +6,7 @@ export function Hero(){
           <h1>Olá, me chamo <span>Italo</span></h1>
         </div>
         <div className="right">
-          <img src="my_icon.png" alt="my icon"  className="icon"/>
+          <a href="https://www.linkedin.com/in/italo-daniel-sa/" target="_blank" rel="noreferrer"><img src="my_icon.png" alt="my icon"  className="icon"/></a>
         </div>
       </section>
     </>
