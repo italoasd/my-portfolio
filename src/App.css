@@ -50,7 +50,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Para garantir que o conteúdo se ajuste em telas menores */
+    flex-wrap: wrap;
 }
 
 #projects {
@@ -67,12 +67,29 @@ h1 {
     width: 70%;
     height: 65%;
     animation: flutuar 5s ease-in-out infinite;
-    padding: 20px; /* Adiciona padding para garantir que o conteúdo tenha espaço em telas menores */
+    padding: 20px;
+}
+
+.info-projeto{
+    background-color: transparent;
+    border-radius: 13%;
+}
+
+.info-projeto:hover{
+    background-color: #2a2a2a;
+}
+
+.descricao-projeto{
+    height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .projects-data {
     display: grid;
-    grid-template-columns: 270px 270px 270px; /* 3 colunas fixas */
+    grid-template-columns: 270px 270px 270px;
     gap: 20px;
     justify-content: center;
 }
@@ -112,6 +129,13 @@ h1 {
     text-transform: uppercase;
 }
 
+#crescendo-na-luta:hover + .cnl{
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    animation: slideIn 0.5s ease forwards;
+}
+
 .right {
     border-radius: 10%;
 }
@@ -126,7 +150,7 @@ h1 {
     filter: drop-shadow(0 0 10px var(--purple));
 }
 
-h1 span {
+.purple {
     color: var(--purple);
 }
 
@@ -136,7 +160,6 @@ h1 span {
     animation: flutuar 5s ease-in-out infinite;
 }
 
-/* Media Queries para Responsividade */
 @media (max-width: 1200px) {
     h1 {
         font-size: 40px;
@@ -148,7 +171,7 @@ h1 span {
     }
 
     .projects-data {
-        grid-template-columns: 280px 280px; /* 2 colunas em telas menores que 1200px */
+        grid-template-columns: 280px 280px;
     }
 }
 
@@ -163,7 +186,7 @@ h1 span {
     }
 
     .projects-data {
-        grid-template-columns: 280px 280px; /* 1 coluna em telas menores que 768px */
+        grid-template-columns: 280px 280px;
     }
 
     .icon {
@@ -182,7 +205,7 @@ h1 span {
     }
 
     .projects-data {
-        grid-template-columns: 280px; /* 1 coluna em telas menores que 480px */
+        grid-template-columns: 280px;
     }
 
     .projeto {
@@ -191,5 +214,15 @@ h1 span {
 
     .icon {
         height: 300px;
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
     }
 }
