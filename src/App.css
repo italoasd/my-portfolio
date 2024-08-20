@@ -39,6 +39,10 @@ h1 {
     font-size: 48px;
 }
 
+a{
+    text-decoration: none;
+}
+
 #navbar {
     /* background-color: var(--purple); */
 }

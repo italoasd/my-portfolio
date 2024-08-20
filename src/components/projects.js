@@ -8,6 +8,7 @@ export function Projects() {
           </div>
           <div className="projects-data">
             <div className="info-projeto">
+            <a href="https://projeto-crescendo-na-luta.vercel.app/" target="_blank" rel="noopener noreferrer">
               <div className="projeto" id="crescendo-na-luta">
                 <img src="projects/crescendo-na-luta.png" alt="imagem do site crescendo na luta" />
               </div>
@@ -16,15 +17,18 @@ export function Projects() {
                 <p>Projeto desenvolvido para uma iniciativa social, com a intenção de apoiar o projeto e aplicar minhas habilidades na prática.</p>
                 <p className="purple">Tecnologias usadas no projeto: Next.js, TypeScript, HTML, CSS</p>
               </div>
+              </a>
             </div>
-            <div className="info-projeto">
-              <div className="projeto">
-                <div>
-                  <h3>em andamento</h3>
+
+              <div className="info-projeto">
+                <div className="projeto">
+                  <div>
+                    <h3>em andamento</h3>
+                  </div>
                 </div>
+                <div className="descricao-projeto"></div>
               </div>
-              <div className="descricao-projeto"></div>
-            </div>
+
             <div className="info-projeto">
               <div className="projeto">
                 <div>
