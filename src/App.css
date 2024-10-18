@@ -57,6 +57,51 @@ a{
     flex-wrap: wrap;
 }
 
+.button-hero {
+    background-color: var(--gray);
+    border: 2px solid var(--purple);
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-hero img {
+    height: 35px;
+    filter: drop-shadow(0 0 3px var(--purple));
+    transition: transform 0.3s;
+}
+
+.button-hero:hover {
+    background-color: var(--purple);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.button-hero:hover img {
+    transform: scale(1.1);
+}
+
+.button-hero:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttons-hero {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
 #projects {
     height: 100vh;
     display: flex;
@@ -65,7 +110,6 @@ a{
 }
 
 .container {
-    background-color: var(--gray);
     opacity: 0.98;
     border-radius: 8%;
     width: 70%;
@@ -159,7 +203,6 @@ a{
 }
 
 .left h1 {
-    background-color: var(--gray);
     border-radius: 20%;
     animation: flutuar 5s ease-in-out infinite;
 }
