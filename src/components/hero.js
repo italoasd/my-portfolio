@@ -5,14 +5,18 @@ export function Hero() {
         <div className="left">
           <h1>Olá, eu sou <span className="purple">Italo Daniel</span></h1>
           <div className="buttons-hero">
-            <button className="button-hero">
-              <img src="https://cdn-icons-png.flaticon.com/512/220/220343.png" alt="Linkedin button" />
-              Linkedin
-            </button>
-            <button className="button-hero">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github button" />
-              Github
-            </button>
+            <a href="https://www.linkedin.com/in/italo-daniel-sa/" target="_blank" rel="noopener noreferrer">
+              <button className="button-hero">
+                <img src="https://cdn-icons-png.flaticon.com/512/220/220343.png" alt="Linkedin button" />
+                Linkedin
+              </button>
+            </a>
+            <a href="https://github.com/italoasd" target="_blank" rel="noopener noreferrer">
+              <button className="button-hero">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github button" />
+                Github
+              </button>
+            </a>
             <a href="pdf/Currículo Italo Daniel.pdf" target="_blank">
               <button className="button-hero">
                 <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="CV button" />
