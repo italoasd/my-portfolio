@@ -35,6 +35,10 @@
     color: var(--white);
 }
 
+body{
+    background-color: var(--gray);
+}
+
 h1 {
     font-size: 48px;
 }
@@ -43,6 +47,21 @@ a{
     text-decoration: none;
 }
 
+#typing-effect {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor {
+    border-right: 2px solid var(--purple);
+    animation: blink 0.7s step-end infinite; 
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; 
+    }
+}
 #navbar {
     /* background-color: var(--purple); */
 }
@@ -70,6 +89,7 @@ a{
     color: var(--white);
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    animation: flutuar 5s ease-in-out infinite;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -203,7 +223,6 @@ a{
 }
 
 .left h1 {
-    border-radius: 20%;
     animation: flutuar 5s ease-in-out infinite;
 }
 
@@ -219,6 +238,18 @@ a{
 
     .projects-data {
         grid-template-columns: 280px 280px;
+    }
+    .button-hero {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+
+    .button-hero img {
+        height: 30px;
+    }
+
+    .buttons-hero {
+        gap: 15px;
     }
 }
 
@@ -239,6 +270,20 @@ a{
     .icon {
         height: 400px;
     }
+    .button-hero {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .button-hero img {
+        height: 28px;
+    }
+
+    .buttons-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -249,10 +294,12 @@ a{
     .container {
         width: 95%;
         height: 80%;
+        padding-bottom: 20px;
     }
 
     .projects-data {
         grid-template-columns: 280px;
+        margin-bottom: 20px;
     }
 
     .projeto {
@@ -261,6 +308,22 @@ a{
 
     .icon {
         height: 300px;
+    }
+    .button-hero {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .button-hero img {
+        height: 25px;
+    }
+
+    .buttons-hero {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 20px;
     }
 }
 @keyframes slideIn {
