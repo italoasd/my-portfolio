@@ -5,6 +5,7 @@ import "./App.css";
 import particlesOptions from "./particles.json";
 import { Hero } from "./components/hero";
 import { Projects } from "./components/projects";
+import { Info } from "./components/info";
 
 function App() {
     const [init, setInit] = useState(false);
@@ -25,6 +26,7 @@ function App() {
         <div className="App">
             <Hero />
             <Projects />
+            <Info />
 
             {init && <Particles options={particlesOptions} />}
         </div>

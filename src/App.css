@@ -1,5 +1,6 @@
 :root {
     --gray: #313131;
+    --low-gray: #252525f2;
     --purple: #a842ff;
     --white: #fffffc;
 }
@@ -23,9 +24,11 @@
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -35,7 +38,7 @@
     color: var(--white);
 }
 
-body{
+body {
     background-color: var(--gray);
 }
 
@@ -43,7 +46,7 @@ h1 {
     font-size: 48px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -54,14 +57,15 @@ a{
 
 .cursor {
     border-right: 2px solid var(--purple);
-    animation: blink 0.7s step-end infinite; 
+    animation: blink 0.7s step-end infinite;
 }
 
 @keyframes blink {
     50% {
-        border-color: transparent; 
+        border-color: transparent;
     }
 }
+
 #navbar {
     /* background-color: var(--purple); */
 }
@@ -138,16 +142,16 @@ a{
     padding: 20px;
 }
 
-.info-projeto{
+.info-projeto {
     background-color: transparent;
     border-radius: 13%;
 }
 
-.info-projeto:hover{
+.info-projeto:hover {
     background-color: #2a2a2a;
 }
 
-.descricao-projeto{
+.descricao-projeto {
     height: 0;
     opacity: 0;
     transform: translateY(-20px);
@@ -197,7 +201,7 @@ a{
     text-transform: uppercase;
 }
 
-#crescendo-na-luta:hover + .cnl{
+#crescendo-na-luta:hover+.cnl {
     height: auto;
     opacity: 1;
     visibility: visible;
@@ -226,6 +230,27 @@ a{
     animation: flutuar 5s ease-in-out infinite;
 }
 
+#infos {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+.info {
+    border: 1px solid var(--purple);
+    border-radius: 60px;
+    width: 80%;
+    background-color: var(--low-gray);
+    padding: 2%;
+}
+
+.info-data p {
+    font-size: 20px;
+}
+
 @media (max-width: 1200px) {
     h1 {
         font-size: 40px;
@@ -239,6 +264,7 @@ a{
     .projects-data {
         grid-template-columns: 280px 280px;
     }
+
     .button-hero {
         padding: 8px 16px;
         font-size: 15px;
@@ -258,6 +284,11 @@ a{
         font-size: 32px;
     }
 
+    #typing-effect {
+        display: flex;
+        flex-direction: column;
+    }
+
     .container {
         width: 90%;
         height: 75%;
@@ -270,6 +301,7 @@ a{
     .icon {
         height: 400px;
     }
+
     .button-hero {
         padding: 8px 14px;
         font-size: 14px;
@@ -283,6 +315,14 @@ a{
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+
+    .info-data p {
+        font-size: 18px;
+    }
+
+    #infos {
+        height: 150vh;
     }
 }
 
@@ -309,6 +349,7 @@ a{
     .icon {
         height: 300px;
     }
+
     .button-hero {
         padding: 6px 12px;
         font-size: 13px;
@@ -325,14 +366,32 @@ a{
         gap: 10px;
         margin-bottom: 20px;
     }
+
+    .info-data p {
+        font-size: 16px;
+    }
+
+    #infos {
+        margin-top: 200px;
+        height: 200vh;
+    }
 }
+
+@media (max-width: 375px) {
+    #infos {
+        margin-top: 250px;
+        height: 300vh;
+    }
+}
+
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateY(-20px); 
+        transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
-        transform: translateY(0); 
+        transform: translateY(0);
     }
 }

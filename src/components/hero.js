@@ -21,7 +21,7 @@ function typeName() {
         if (nameIndex < name.length) {
             nameElement.innerHTML += name.charAt(nameIndex);
             nameIndex++;
-        } 
+        }
     }, typingSpeed);
 }
 
@@ -34,7 +34,7 @@ export function Hero() {
       <section id="hero">
         <div className="left">
           <h1 id="typing-effect">
-            <span id="text"></span><span className="purple" id="name"></span><span id="cursor" className="cursor"></span>
+            <span id="text"></span><span className="box"><span className="purple" id="name"></span><span id="cursor" className="cursor"></span></span>
           </h1>
           <div className="buttons-hero">
             <a href="https://www.linkedin.com/in/italo-daniel-sa/" target="_blank" rel="noopener noreferrer">
